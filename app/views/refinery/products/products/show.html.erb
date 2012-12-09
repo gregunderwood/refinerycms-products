@@ -21,7 +21,7 @@
 		      <% @product.photos.each_with_index do |photo, index| %>
 			    <li <% if index == 0 %>class="selected"<% end %>>
 			      <div class="loading">
-			      <%= link_to (image_fu photo.picture, '100x80'), photo.picture.image.url, :class => "photo_thumb" %>
+			      <%= link_to (image_fu photo.picture, :small), photo.picture.image.url, :class => "photo_thumb" %>
 			      </div>
 			    </li>
 			  <% end %>

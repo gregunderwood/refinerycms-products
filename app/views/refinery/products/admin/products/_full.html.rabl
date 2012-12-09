@@ -11,7 +11,7 @@ child :photos do |photo|
     attributes :id
     
     node :url do |image|
-      image.thumbnail.url
+      image.thumbnail(:medium).url
     end
     
   end
