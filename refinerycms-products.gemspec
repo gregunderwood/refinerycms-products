@@ -3,13 +3,14 @@
 Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
   s.name              = 'refinerycms-products'
-  s.version           = '1.0'
+  s.version           = '0.1'
   s.description       = 'Ruby on Rails Products extension for Refinery CMS'
-  s.date              = '2012-11-11'
+  s.date              = '2012-12-09'
   s.summary           = 'Products extension for Refinery CMS'
   s.require_paths     = %w(lib)
   s.files             = Dir["{app,config,db,lib}/**/*"] + ["readme.md"]
-
+  s.authors           = ['Greg Underwood']
+  
   # Runtime dependencies
   s.add_dependency             'refinerycms-core',    '~> 2.0.8'
 
