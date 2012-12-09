@@ -6,7 +6,7 @@
       </h3>
       <p>
       	<div class="loading">
-      	<%= link_to (image_fu product.photos.first.picture, '255x225'), refinery.products_product_path(product) %>
+      	<%= link_to (image_fu product.photos.first.picture, :medium), refinery.products_product_path(product) %>
         </div>
       </p>
       <p><%=raw product.description %></p>
