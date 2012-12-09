@@ -1,0 +1,51 @@
+<div class="row"> 
+	<div id="product_container" class="nine columns">  
+      <div class="row">
+	      <h2>
+	        <%= @product.name %>
+	      </h2>
+      </div>
+      <div class="row">
+	      <div class="ten columns">
+		      <p>
+		      	<div class="loading">
+		      	<%= image_fu @product.photos.first.picture, '600x560', :id => "product_photo" %>
+		       </div>
+		      </p>
+		      <div class="row">
+			    <%=raw @product.description %>      
+			  </div>
+		  </div>
+		  <div class="two columns">
+		  	<ul class="photo_thumbs">
+		      <% @product.photos.each_with_index do |photo, index| %>
+			    <li <% if index == 0 %>class="selected"<% end %>>
+			      <div class="loading">
+			      <%= link_to (image_fu photo.picture, '100x80'), photo.picture.image.url, :class => "photo_thumb" %>
+			      </div>
+			    </li>
+			  <% end %>
+			</ul>	    	
+	      </div>	  
+	  </div>
+    </div>
+    
+    <div class="three columns">
+	  <aside>
+	    <h4><%= t('.other') %></h4>
+	    <ul id="products">
+	        <li>
+	          <%= link_to "All products", refinery.products_products_path %>
+	        </li>
+	      <% @products.each do |product| %>
+	        <li>
+	          <%= link_to product.name, refinery.products_product_path(product) %>
+	        </li>
+	      <% end %>
+	    </ul
+	  </aside>
+  </div>
+</div>
+
+<% content_for :stylesheets, stylesheet_link_tag("refinery/products/frontend") %>
+<% content_for :javascripts, javascript_include_tag("refinery/products/frontend") %>

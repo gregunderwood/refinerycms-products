@@ -1,0 +1,22 @@
+<input type="hidden" class="photo_picture_id" name="photos[{{id}}][picture_id]" value="{{picture_id}}" />
+<div class="field">  
+	<label for="photo_title">Title</label>
+	<input class="larger widest photo_name" name="photos[{{id}}][title]" size="30" type="text" value="{{title}}">
+</div>
+<div class="field">
+  <label for="photo_description">Description</label>
+  <textarea  class="photo_description" name="photos[{{id}}][description]" rows="4" >{{description}}</textarea>
+</div>
+<div class="picture_container"></div>
+<div class="field">
+  <section class="product_actions">
+    <ul>
+	  <li>
+	    <a href="/refinery/images/new?dialog=true" class="add_icon add_picture">Add picture</a>
+	  </li>
+	  <li>
+	    <a href="javascript: void(0);" class="delete_icon delete_photo">Delete photo</a>
+	  </li>
+	</ul>
+  </section>
+</div>

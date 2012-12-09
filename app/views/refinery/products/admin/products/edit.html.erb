@@ -1,0 +1,7 @@
+<%= render 'form' %>
+
+<% content_for :javascripts do %>
+<script type="text/javascript">
+  var product = '<%= render('full').html_safe %>';
+</script>
+<% end %>

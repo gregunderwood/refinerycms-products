@@ -1,0 +1,20 @@
+<div class="row" id="products_container">  
+  <% @products.each do |product| %>
+    <div class="product">  
+      <h3>
+        <%= link_to product.name, refinery.products_product_path(product) %>
+      </h3>
+      <p>
+      	<div class="loading">
+      	<%= link_to (image_fu product.photos.first.picture, '255x225'), refinery.products_product_path(product) %>
+        </div>
+      </p>
+      <p><%=raw product.description %></p>
+    </div>
+  <% end %>
+  <div style="clear: both;">
+</div>
+
+
+<% content_for :stylesheets, stylesheet_link_tag("refinery/products/frontend") %>
+<% content_for :javascripts, javascript_include_tag("refinery/products/frontend") %>

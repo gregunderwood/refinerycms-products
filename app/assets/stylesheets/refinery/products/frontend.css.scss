@@ -1,0 +1,39 @@
+aside {
+  ul#products {
+    list-style-type: none;
+  }
+}
+
+ul.photo_thumbs {
+  list-style-type: none;
+  
+  li{
+    padding: 8px;
+  }
+  
+  li.selected {
+    background: #CCFFFF;
+  }
+}
+
+#product_container, #products_container {
+  
+  .loading {
+    background: url('/assets/refinery/products/spinner.gif') no-repeat;
+    min-height: 30px;
+    min-width: 30px;
+    margin: 0px auto;
+  }
+  
+  .product {
+    width: 255px;
+    margin: 10px;
+    float: left;
+    background: #F4F9FF;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 10px;
+    
+  }
+}
+
