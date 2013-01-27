@@ -23,8 +23,9 @@ module Refinery
         end
         photos_hash.each do |id, photo|
           if id.match(/^c/)
-            photos.create :title => photo["title"], :description => photo["decription"],
+            photo = photos.build :title => photo["title"], :description => photo["decription"],
                           :picture_id => photo['picture_id']
+            photo.save!
           end
         end
       end
@@ -41,7 +42,7 @@ module Refinery
     
       acts_as_indexed :fields => [:title, :description]
 
-      validates :picture_id, :presence => true, :uniqueness => true
+      validates :picture_id, :presence => true
     end
   end
 end
